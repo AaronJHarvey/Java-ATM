@@ -1,16 +1,16 @@
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.function.Supplier;
 
 
 public class ATM {
-    private static User aaron = new User("Aaron", 1234);
-    private static User alex = new User("Alex", 5678);
-    private static ArrayList<User> users = new ArrayList<User>(
-        Arrays.asList(aaron, alex)
-    ) ;
+    private static ArrayList<User> users = new ArrayList<User>();
+    static User a = new User("Aaron", 1234);
+
+
     
     // public static void login() {
     //     Scanner in = new Scanner(System.in);
@@ -18,18 +18,15 @@ public class ATM {
     //    int inputId = in.nextInt();
     //     System.out.print(inputId);
     // }a
-    public static void login() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Hello! Please enter your UserID: ");
-        String userInput = in.nextLine().toLowerCase();
-        System.out.print("\n\n" + users.toString().contains(userInput)+ "\n\n");
-        System.out.print("\n\n" + userInput.getClass() + "\n\n");
-    //    System.out.print("\n\n" + users.contains(userInput) + "\n\n");
-    }
+
    
     public static void main(String[] args) {
+        users.add(a);
+        Scanner in = new Scanner(System.in);
+        String userInput = in.nextLine().toLowerCase();
 
-        login();
+        System.out.println(users.toString().toLowerCase().contains(userInput));
+
     }
 
 
