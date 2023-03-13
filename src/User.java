@@ -14,8 +14,8 @@ public class User {
         this.name = name;
     }
 
-    public void getPassword() {
-        System.out.print("\n\n" + String.valueOf(password) + "\n\n");
+    public String getPassword() {
+        return String.valueOf(password);
     }
 
     public String toString() {

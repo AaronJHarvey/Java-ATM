@@ -8,7 +8,8 @@ import java.util.function.Supplier;
 
 public class ATM {
     private static ArrayList<User> users = new ArrayList<User>();
-    static User a = new User("Aaron", 1234);
+    static User aaron = new User("Aaron", 1234);
+    static User alex = new User("Alex", 5678);
 
 
     
@@ -21,11 +22,20 @@ public class ATM {
 
    
     public static void main(String[] args) {
-        users.add(a);
-        Scanner in = new Scanner(System.in);
-        String userInput = in.nextLine().toLowerCase();
+        users.add(aaron);
+        users.add(alex);
+        for (int i = 0; i < users.size(); i++) {
+          System.out.print("Test\n" + users.get(i).getPassword() + "\n");
+            
+        }
 
-        System.out.println(users.toString().toLowerCase().contains(userInput));
+        // Scanner in = new Scanner(System.in);
+        // String userInput = in.nextLine().toLowerCase();
+
+
+
+
+        // System.out.println(users.toString().toLowerCase().contains(userInput));
 
     }
 
