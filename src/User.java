@@ -10,8 +10,12 @@ public class User {
         this.password = password;
     }
 
-    public void changeName(String name){
+    public void changeName(String name) {
         this.name = name;
+    }
+    
+    public String getName() {
+        return name;
     }
 
     public String getPassword() {
