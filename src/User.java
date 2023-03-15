@@ -1,21 +1,21 @@
 import java.util.ArrayList;
 
 public class User {
-    private String name;
+    private int userID;
     private int password;
     // private ArrayList<Account> accounts;
 
-    public User(String name, int password) {
-        this.name = name;
+    public User(int userID, int password) {
+        this.userID = userID;
         this.password = password;
     }
 
-    public void changeName(String name) {
-        this.name = name;
+    public void changeName(int userID) {
+        this.userID= userID;
     }
     
-    public String getName() {
-        return name;
+    public int getID() {
+        return userID;
     }
 
     public String getPassword() {
@@ -23,7 +23,7 @@ public class User {
     }
 
     public String toString() {
-        return String.valueOf(name);
+        return String.valueOf(userID);
     }
 
     

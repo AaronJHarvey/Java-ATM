@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Session {
 
     private static ArrayList<User> users = new ArrayList<User>();
-    static User a = new User("Aaron", 1234);
-    static User al = new User("Alex", 5678);
+    static User a = new User(55465, 1234);
+    static User al = new User(1234567, 5678);
     public static User currentUser;
 
     public static void login() {
@@ -14,10 +14,10 @@ public class Session {
         Scanner in = new Scanner(System.in);
         do {
             System.out.println("Hello! Please enter your name: ");
-            String inputName = in.nextLine();
-
+            String inputID = in.nextLine();
+            
             for (int i = 0; i < users.size(); i++) {
-                if (users.get(i).toString().toLowerCase().equals(inputName.toLowerCase())) {
+                if (users.get(i).toString().equals(inputID.toString())) {
                     currentUser = users.get(i);
                     break;
                 }
