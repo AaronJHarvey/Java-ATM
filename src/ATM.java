@@ -12,6 +12,7 @@ public class ATM {
     
     Session.login();
     currentUser = Session.currentUser;
+    System.out.print("The current user is: " + currentUser + "\n");
 
 
   }
