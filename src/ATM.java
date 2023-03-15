@@ -12,7 +12,6 @@ public class ATM {
 
     Session.login();
     currentUser = Session.currentUser;
-
   }
 }
     
