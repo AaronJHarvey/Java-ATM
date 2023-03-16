@@ -9,10 +9,6 @@ public class User {
         this.userID = userID;
         this.password = password;
     }
-
-    public void changeName(int userID) {
-        this.userID= userID;
-    }
     
     public int getID() {
         return userID;
@@ -20,6 +16,10 @@ public class User {
 
     public String getPassword() {
         return String.valueOf(password);
+    }
+
+    public void changePassword(int password) {
+        this.password = password;
     }
 
     public String toString() {
