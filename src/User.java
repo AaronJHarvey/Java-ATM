@@ -12,6 +12,7 @@ public class User {
         this.userID = userID;
         this.password = password;
         this.accounts = accounts;
+        System.out.println(this.accounts);
     }
 
     public void createAccount(String name, int balance) {
