@@ -14,6 +14,15 @@ public class ATM {
 
     Session.login();
     currentUser = Session.currentUser;
+    currentUser.accounts.get(1).deposit(1000);
+    // for (int i = 0; i < currentUser.accounts.size(); i++) {
+    //   System.out.print(currentUser.accounts.get(i) + "\n\n\n");
+    // }
+    // ;
+    
+
+
+
     // currentUser.createAccount("Checking", 0);
     // currentUser.createAccount("Savings", 150);
     // System.out.print("\n\n" + currentUser.getAccounts() + "\n\n");

@@ -11,6 +11,11 @@ public class Account {
     public String toString() {
         accString = accountType + " " + String.valueOf(accountBalance);
         return accString;
-        
-   }
+
+    }
+   
+    public void deposit(int amount) {
+        accountBalance += amount;
+        System.out.print("Your new balance is: " + String.valueOf(accountBalance));
+    }
 }

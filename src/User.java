@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class User {
     private int userID;
     private int password;
-    private ArrayList<Account> accounts;
+    ArrayList<Account> accounts;
   
     
 
