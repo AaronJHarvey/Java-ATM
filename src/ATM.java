@@ -14,8 +14,8 @@ public class ATM {
 
     Session.login();
     currentUser = Session.currentUser;
-    currentUser.createAccount("Checking", 0);
-    currentUser.createAccount("Savings", 150);
+    // currentUser.createAccount("Checking", 0);
+    // currentUser.createAccount("Savings", 150);
     System.out.print("\n\n" + currentUser.getAccounts() + "\n\n");
 
     // System.out.print("The current password is: " + currentUser.getPassword() + "\n\n");

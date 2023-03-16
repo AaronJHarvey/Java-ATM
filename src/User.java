@@ -1,17 +1,17 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class User {
     private int userID;
     private int password;
-    private ArrayList<Account> accounts = new ArrayList<Account>();
-
+    private ArrayList<Account> accounts;
   
     
 
-    public User(int userID, int password) {
+    public User(int userID, int password, ArrayList<Account> accounts ) {
         this.userID = userID;
         this.password = password;
-        // this.accounts = accounts;
+        this.accounts = accounts;
     }
 
     public void createAccount(String name, int balance) {

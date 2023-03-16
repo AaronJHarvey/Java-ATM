@@ -1,11 +1,19 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Session {
 
     private static ArrayList<User> users = new ArrayList<User>();
-    static User a = new User(55465, 1234);
-    static User al = new User(1234567, 5678);
+    static User a = new User(55465, 1234, new ArrayList<Account>(
+        Arrays.asList(new Account("Checking",150),
+        new Account("Savings", 100))
+    ));
+    static User al = new User(1234567, 5678, new ArrayList<Account>(
+        Arrays.asList(new Account("Checking", 0),
+        new Account("Savings", 0))
+    ));
     public static User currentUser;
 
     public static void login() {
