@@ -11,8 +11,8 @@ public class Session {
         new Account("Savings", 100))
     ));
     static User al = new User(1234567, 5678, new ArrayList<Account>(
-        Arrays.asList(new Account("Checking", 0),
-        new Account("Savings", 0))
+        Arrays.asList(new Account("Checking", 10000),
+        new Account("Savings", 250))
     ));
     public static User currentUser;
 

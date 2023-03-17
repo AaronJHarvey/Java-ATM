@@ -34,7 +34,7 @@ public class User {
         }
         int choice = in.nextInt();
         accountChoice = accounts.get(choice - 1);
-        System.out.print(accountChoice);
+
         return accountChoice;
    }
 
