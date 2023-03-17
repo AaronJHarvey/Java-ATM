@@ -1,5 +1,5 @@
 public class Account {
-    private String accountType;
+    String accountType;
     private int accountBalance = 0;
     private String accString;
 

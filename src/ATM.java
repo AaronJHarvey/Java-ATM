@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 public class ATM {
   static User currentUser;
+  static Account accountChoice;
+
  
   public static void main(String[] args) {
 
@@ -14,11 +16,12 @@ public class ATM {
 
     Session.login();
     currentUser = Session.currentUser;
-    currentUser.accounts.get(1).deposit(1000);
-    // for (int i = 0; i < currentUser.accounts.size(); i++) {
-    //   System.out.print(currentUser.accounts.get(i) + "\n\n\n");
-    // }
-    // ;
+    // currentUser.chooseAccount();
+    accountChoice = currentUser.chooseAccount();
+
+
+    // currentUser.accounts.get(1).deposit(1000);
+   
     
 
 

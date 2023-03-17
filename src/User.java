@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class User {
     private int userID;
     private int password;
     ArrayList<Account> accounts;
+    public Account accountChoice;
   
     
 
@@ -22,9 +24,19 @@ public class User {
         System.out.println(accounts.toString());
     }
     
-    public String getAccounts() {
-        return accounts.toString();
-    }
+    public Account chooseAccount() {
+        System.out.print("Please choose your desired account: ");
+        int x = 1;
+        Scanner in = new Scanner(System.in);
+        for (int i = 0; i < accounts.size(); i++) {
+            System.out.print("\n\n" + "Press " + x + " for " + accounts.get(i).accountType + "\n\n");
+            x++;
+        }
+        int choice = in.nextInt();
+        accountChoice = accounts.get(choice - 1);
+        System.out.print(accountChoice);
+        return accountChoice;
+   }
 
     
     public int getID() {
