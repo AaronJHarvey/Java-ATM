@@ -17,22 +17,25 @@ public class Account {
     }
 
     public void deposit() {
-        // do {
+        System.out.print("Enter amount to deposit: ");
+        Scanner in = new Scanner(System.in);
+        int depAmount = in.nextInt();
+        System.out.print(
+                "Previous Balance: $" + accountBalance + "\n Amount Deposited: $" + depAmount + "\n New Balance: $");
+        System.out.println(accountBalance += depAmount);
 
-        // }
-        // accountBalance += amount;
-        System.out.print(accountBalance);
     }
 
     public void chooseTransaction() {
         int x = 0;
-        do {
+        
             System.out.print("\n\n Please choose what you wish to do: \n" +
             " Press 1 for Deposit \n" + 
             " Press 2 for Withdraw \n" + 
             " Press 3 for Current Balance \n"+
             " Press 4 to Exit \n"
             );
+            do {
             Scanner in = new Scanner(System.in);
             int transaction = in.nextInt();
             switch (transaction) {
