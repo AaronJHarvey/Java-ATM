@@ -29,7 +29,7 @@ public class User {
         int x = 1;
         Scanner in = new Scanner(System.in);
         for (int i = 0; i < accounts.size(); i++) {
-            System.out.print("\n\n" + "Press " + x + " for " + accounts.get(i).accountType + "\n\n");
+            System.out.print("\n" + "Press " + x + " for " + accounts.get(i).accountType + "\n");
             x++;
         }
         int choice = in.nextInt();
