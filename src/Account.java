@@ -21,7 +21,7 @@ public class Account {
         Scanner in = new Scanner(System.in);
         int depAmount = in.nextInt();
         System.out.print(
-                "Previous Balance: $" + accountBalance + "\n Amount Deposited: $" + depAmount + "\n New Balance: $");
+                "\n     Previous Balance: $" + accountBalance + "\n     Amount Deposited: $" + depAmount + "\n     New Balance: $");
         System.out.println(accountBalance += depAmount);
 
     }
