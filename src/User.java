@@ -25,18 +25,29 @@ public class User {
     }
     
     public Account chooseAccount() {
+       
         System.out.print("Please choose your desired account: ");
-        int x = 1;
-        Scanner in = new Scanner(System.in);
-        for (int i = 0; i < accounts.size(); i++) {
-            System.out.print("\n" + "Press " + x + " for " + accounts.get(i).accountType + "\n");
-            x++;
-        }
-        int choice = in.nextInt();
-        accountChoice = accounts.get(choice - 1);
+        int y = 0;
+        do {
+            int x = 1;
+            Scanner in = new Scanner(System.in);
+            for (int i = 0; i < accounts.size(); i++) {
+                System.out.print("\n Press " + x + " for " + accounts.get(i).accountType + "\n");
+                x++;
+            }
+            int choice = in.nextInt();
+            
+            if (choice - 1 >= accounts.size()) {
+                System.out.print("No account found, please try again");
+            } else {
+                accountChoice = accounts.get(choice - 1);
+                y = 1;
+            }
+            return accountChoice;
+        } while (y != 1);
 
-        return accountChoice;
-   }
+
+    }
 
     
     public int getID() {
