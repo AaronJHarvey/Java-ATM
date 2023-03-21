@@ -21,10 +21,18 @@ public class Account {
         Scanner in = new Scanner(System.in);
         int depAmount = in.nextInt();
         System.out.print(
-                "\n     Previous Balance: $" + accountBalance + "\n     Amount Deposited: $" + depAmount + "\n     New Balance: $");
+                "\n     Previous Balance: $" + accountBalance + "\n     Amount Deposited: $" + depAmount
+                        + "\n     New Balance: $");
         System.out.println(accountBalance += depAmount);
 
+        // System.out.println("\n\n Would you like to complete another transaction?");
+        // String cont = in.nextLine();
+        // System.out.print(cont);
+
+
     }
+    
+    
 
     public void chooseTransaction() {
         int x = 0;

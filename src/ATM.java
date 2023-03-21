@@ -12,12 +12,12 @@ public class ATM {
  
   public static void main(String[] args) {
 
-    // User test = new User(98765, 123);
+
 
     Session.login();
-    currentUser = Session.currentUser;
-    accountChoice = currentUser.chooseAccount();
-    accountChoice.chooseTransaction();
+    // currentUser = Session.currentUser;
+    // accountChoice = currentUser.chooseAccount();
+    // accountChoice.chooseTransaction();
     // accountChoice.deposit(0);
 
 

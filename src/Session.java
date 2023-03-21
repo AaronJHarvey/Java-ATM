@@ -20,13 +20,15 @@ public class Session {
         users.add(a);
         users.add(al);
         Scanner in = new Scanner(System.in);
+        
         do {
-            System.out.println("Hello! Please enter your name: ");
+            System.out.println("\n\n\nHello! Please enter your UserID: ");
             String inputID = in.nextLine();
             
             for (int i = 0; i < users.size(); i++) {
                 if (users.get(i).toString().equals(inputID.toString())) {
                     currentUser = users.get(i);
+                    System.out.print(currentUser);
                     break;
                 }
             }
