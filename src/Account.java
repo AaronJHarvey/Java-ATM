@@ -1,10 +1,13 @@
 import java.util.Scanner;
 
+import apple.laf.JRSUIConstants.Widget;
+
 public class Account {
     String accountType;
     private int accountBalance;
     private String accString;
     int x = 0;
+    String answer = "";
 
     public Account(String accountType, int accountBalance){
         this.accountType = accountType;
@@ -51,7 +54,34 @@ public class Account {
     
     public void withdraw() {
         // int resp = 10;
-        System.out.print("Enter amount to withdraw");
+        System.out.print("Enter amount to withdraw:  ");
+        Scanner in = new Scanner(System.in);
+        int withdrawAmount = in.nextInt();
+        
+        if (accountBalance - withdrawAmount < 0) {
+            System.out.print("This withdraw will result in a negative balance for this account. Continue anyway? ");
+            in.nextLine();
+            answer = in.nextLine();
+            if (answer.toLowerCase().equals("yes")) {
+                System.out.println("Previous Account Balance: $" + accountBalance + 
+                        "\n Amount Withdrawn: $" + withdrawAmount +
+                        "\n New Balance: $" + (accountBalance -= withdrawAmount));
+
+            }
+            // System.out.print(answer);
+        }
+
+        // if (accountBalance - withdrawAmount < 0) {
+        //     System.out.print("This withdraw will cause your account to have a negative balance. Continue anyway? ");
+        //     in.nextLine();
+        //     answer = in.nextLine();
+        //     if (answer.toLowerCase() == "yes") {
+        //         accountBalance -= withdrawAmount;
+        //         System.out.print(accountBalance);
+        //     }
+        // }
+        // System.out.print(withdrawAmount + "\n\n");
+        x = 1;
     }
     
 
