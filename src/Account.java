@@ -47,28 +47,20 @@ public class Account {
                     resp = 11;
             }
         } while (resp != 10);
-        
-
-
-        // System.out.println("\n\n Would you like to complete another transaction?");
-        // String cont = in.nextLine();
-        // System.out.print(cont);
-
-
     }
     
     
 
     public void chooseTransaction() {
         
-        
+        do {
             System.out.print("\n\n Please choose what you wish to do: \n" +
             " Press 1 for Deposit \n" + 
             " Press 2 for Withdraw \n" + 
             " Press 3 for Current Balance \n"+
             " Press 4 to Exit \n"
             );
-            do {
+            
             Scanner in = new Scanner(System.in);
             int transaction = in.nextInt();
             switch (transaction) {
@@ -88,6 +80,7 @@ public class Account {
                     break;
                 default:
                     System.out.print("Invalid entry. Please Try Again");
+
             }
         } while( x != 1);
     }
