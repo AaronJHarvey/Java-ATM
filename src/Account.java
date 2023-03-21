@@ -49,6 +49,10 @@ public class Account {
         } while (resp != 10);
     }
     
+    public void withdraw() {
+        // int resp = 10;
+        System.out.print("Enter amount to withdraw");
+    }
     
 
     public void chooseTransaction() {
@@ -68,8 +72,8 @@ public class Account {
                     deposit();
                     break;
                 case 2:
-                    System.out.print("Withdraw");
-                    // withdraw();
+                    // System.out.print("Withdraw");
+                    withdraw();
                     break;
                 case 3:
                     System.out.print("Balance");
