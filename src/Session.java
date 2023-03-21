@@ -22,16 +22,24 @@ public class Session {
         Scanner in = new Scanner(System.in);
         
         do {
-            System.out.println("\n\n\nHello! Please enter your UserID: ");
+            System.out.println("Hello! Please enter your UserID: ");
             String inputID = in.nextLine();
             
             for (int i = 0; i < users.size(); i++) {
                 if (users.get(i).toString().equals(inputID.toString())) {
-                    currentUser = users.get(i);
-                    System.out.print(currentUser);
+                    User tempCurrentUser = users.get(i);
+                    System.out.print("Please enter your PIN: ");
+                    String inputPin = in.nextLine();
+                    
+                    if (inputPin.equals(tempCurrentUser.getPassword())) {
+                        currentUser = tempCurrentUser;
+                    } else {
+                        System.out.print("Invalid PIN. Please Try Again. \n");
+                    }
                     break;
                 }
             }
+
             if (currentUser == null) {
                 System.out.print("User Not Found. Please Try Again! \n");
             }

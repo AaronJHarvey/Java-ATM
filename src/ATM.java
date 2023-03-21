@@ -15,8 +15,8 @@ public class ATM {
 
 
     Session.login();
-    // currentUser = Session.currentUser;
-    // accountChoice = currentUser.chooseAccount();
+    currentUser = Session.currentUser;
+    accountChoice = currentUser.chooseAccount();
     // accountChoice.chooseTransaction();
     // accountChoice.deposit(0);
 
