@@ -4,6 +4,7 @@ public class Account {
     String accountType;
     private int accountBalance;
     private String accString;
+    int x = 0;
 
     public Account(String accountType, int accountBalance){
         this.accountType = accountType;
@@ -25,6 +26,7 @@ public class Account {
                         + "\n     New Balance: $");
         System.out.println(accountBalance += depAmount);
 
+
         // System.out.println("\n\n Would you like to complete another transaction?");
         // String cont = in.nextLine();
         // System.out.print(cont);
@@ -35,7 +37,7 @@ public class Account {
     
 
     public void chooseTransaction() {
-        int x = 0;
+        
         
             System.out.print("\n\n Please choose what you wish to do: \n" +
             " Press 1 for Deposit \n" + 
