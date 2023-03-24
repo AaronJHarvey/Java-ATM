@@ -58,8 +58,6 @@ public class Account {
             }
     }
     
-    
-    
     public void withdraw() {
 
         System.out.print("Enter amount to withdraw:  ");
@@ -87,6 +85,15 @@ public class Account {
         } while (resp != 10);
     }
     
+    public int getBalance() {
+        System.out.print("\n\n Your account Balance for " + accountType + " is $");
+        System.out.print(accountBalance + "\n");
+        do {
+            doAnotherTransaction();
+        } while (x != 10);
+         return accountBalance;
+    }
+
 
     public void chooseTransaction() {
         
@@ -109,15 +116,14 @@ public class Account {
                     withdraw();
                     break;
                 case 3:
-                    System.out.print("Balance");
-                    // getBalance();
+                    // System.out.print("Balance");
+                    getBalance();
                     break;
                 case 4:
                     x = 1;
                     break;
                 default:
                     System.out.print("Invalid entry. Please Try Again");
-
             }
         } while( x != 1);
     }
