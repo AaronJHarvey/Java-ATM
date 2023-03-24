@@ -82,11 +82,9 @@ public class Account {
                     "\n      Amount Withdrawn: $" + withdrawAmount +
                     "\n      New Account Balance: $" + (accountBalance -= withdrawAmount) + "\n");
         }
-        
         do {
             doAnotherTransaction();
         } while (resp != 10);
-
     }
     
 
