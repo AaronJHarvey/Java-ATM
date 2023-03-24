@@ -66,9 +66,12 @@ public class Account {
                 System.out.println("Previous Account Balance: $" + accountBalance + 
                         "\n Amount Withdrawn: $" + withdrawAmount +
                         "\n New Balance: $" + (accountBalance -= withdrawAmount));
-
+            } else {
+                withdraw();
             }
             // System.out.print(answer);
+        } else {
+            System.out.print(accountBalance -= withdrawAmount);
         }
 
         // if (accountBalance - withdrawAmount < 0) {
