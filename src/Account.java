@@ -33,25 +33,6 @@ public class Account {
         
         do {
             doAnotherTransaction();
-            
-            // System.out.print("\n\n Would you like to complete another transaction? \n" +
-            //     "     Press 1 for Yes\n" +
-            //     "     Press 2 for No\n");
-            // int cont = in.nextInt();
-
-            // switch (cont) {
-            //     case 1:
-            //         resp = 10;
-            //         chooseTransaction();
-            //         break;
-            //     case 2:
-            //         resp = 10 ;
-            //         x = 1;
-            //         break;
-            //     default:
-            //         System.out.println("Invalid response Please Try Again.");
-            //         resp = 11;
-            // }
         } while (resp != 10);
     }
     
