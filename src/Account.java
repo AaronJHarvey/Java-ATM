@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import apple.laf.JRSUIConstants.Widget;
+
 
 public class Account {
     String accountType;
@@ -8,6 +8,7 @@ public class Account {
     private String accString;
     int x = 0;
     String answer = "";
+    int resp = 11;
 
     public Account(String accountType, int accountBalance){
         this.accountType = accountType;
@@ -30,7 +31,32 @@ public class Account {
                         + "\n     New Balance: $");
         System.out.println(accountBalance += depAmount);
         
-        do{  
+        do {
+            doAnotherTransaction();
+            
+            // System.out.print("\n\n Would you like to complete another transaction? \n" +
+            //     "     Press 1 for Yes\n" +
+            //     "     Press 2 for No\n");
+            // int cont = in.nextInt();
+
+            // switch (cont) {
+            //     case 1:
+            //         resp = 10;
+            //         chooseTransaction();
+            //         break;
+            //     case 2:
+            //         resp = 10 ;
+            //         x = 1;
+            //         break;
+            //     default:
+            //         System.out.println("Invalid response Please Try Again.");
+            //         resp = 11;
+            // }
+        } while (resp != 10);
+    }
+    
+    public void doAnotherTransaction() {
+        Scanner in = new Scanner(System.in);
             System.out.print("\n\n Would you like to complete another transaction? \n" +
                 "     Press 1 for Yes\n" +
                 "     Press 2 for No\n");
@@ -49,11 +75,12 @@ public class Account {
                     System.out.println("Invalid response Please Try Again.");
                     resp = 11;
             }
-        } while (resp != 10);
     }
     
+    
+    
     public void withdraw() {
-        // int resp = 10;
+
         System.out.print("Enter amount to withdraw:  ");
         Scanner in = new Scanner(System.in);
         int withdrawAmount = in.nextInt();
@@ -69,22 +96,16 @@ public class Account {
             } else {
                 withdraw();
             }
-            // System.out.print(answer);
         } else {
-            System.out.print(accountBalance -= withdrawAmount);
+            System.out.print("\n      Previous Balance: $" + accountBalance +
+                    "\n      Amount Withdrawn: $" + withdrawAmount +
+                    "\n      New Account Balance: $" + (accountBalance -= withdrawAmount) + "\n");
         }
+        
+        do {
+            doAnotherTransaction();
+        } while (resp != 10);
 
-        // if (accountBalance - withdrawAmount < 0) {
-        //     System.out.print("This withdraw will cause your account to have a negative balance. Continue anyway? ");
-        //     in.nextLine();
-        //     answer = in.nextLine();
-        //     if (answer.toLowerCase() == "yes") {
-        //         accountBalance -= withdrawAmount;
-        //         System.out.print(accountBalance);
-        //     }
-        // }
-        // System.out.print(withdrawAmount + "\n\n");
-        x = 1;
     }
     
 
