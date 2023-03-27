@@ -18,7 +18,7 @@ public class ATM {
     currentUser = Session.currentUser;
     accountChoice = currentUser.chooseAccount();
     accountChoice.chooseTransaction();
-    // accountChoice.getBalance();
+
   }
 }
     
