@@ -10,6 +10,8 @@ public class Account {
     String answer = "";
     int resp = 11;
 
+
+
     public Account(String accountType, int accountBalance){
         this.accountType = accountType;
         this.accountBalance = accountBalance;
@@ -94,8 +96,14 @@ public class Account {
          return accountBalance;
     }
 
-    public void tranfer() {
+    public void transfer() {
+        User curr = ATM.currentUser;
         // Make sure that the user has more than one account 
+        if (curr.accounts.size() > 1) {
+
+            System.out.print("You will be making a transfer from your " + accountType
+                    + " account. What account would you like to transfer money to? ");   
+            }
             // if yes, ask them to verify they want to transfer from (current account) and ask them which account they wish to transfer the money to.
             // if no, return message saying transfer cannot be done. 
         // Once they have confirmed they want to do the transfer and chosen the account: 
@@ -133,7 +141,8 @@ public class Account {
                     getBalance();
                     break;
                 case 4:
-                    System.out.println("Transfer");
+                    // System.out.println("Transfer");
+                    transfer();
                     break;
                 case 5:
                     x = 1;

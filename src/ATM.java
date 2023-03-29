@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 public class ATM {
-  static User currentUser;
+  static public User currentUser;
   static Account accountChoice;
 
  
@@ -18,6 +18,7 @@ public class ATM {
     currentUser = Session.currentUser;
     accountChoice = currentUser.chooseAccount();
     accountChoice.chooseTransaction();
+
 
   }
 }
