@@ -98,12 +98,30 @@ public class Account {
 
     public void transfer() {
         User curr = ATM.currentUser;
+        // System.out.print(ATM.accountChoice);
         // Make sure that the user has more than one account 
         if (curr.accounts.size() > 1) {
+            Account transferToAccount;
+            
+            curr.accounts.remove(ATM.accountChoice);
 
             System.out.print("You will be making a transfer from your " + accountType
-                    + " account. What account would you like to transfer money to? ");   
+                    + " account. What account would you like to transfer money to? ");
+            Scanner sc = new Scanner(System.in);
+            
+            int c = 1;
+
+            for (int i = 0; i < curr.accounts.size(); i++) {
+                System.out.println("\n Press " + c + " for " + curr.accounts.get(i).accountType + "\n");
+                c++;
             }
+            
+            int input = sc.nextInt();
+
+            transferToAccount = curr.accounts.get(input - 1);
+            System.out.print(transferToAccount);
+
+        }
             // if yes, ask them to verify they want to transfer from (current account) and ask them which account they wish to transfer the money to.
             // if no, return message saying transfer cannot be done. 
         // Once they have confirmed they want to do the transfer and chosen the account: 

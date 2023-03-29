@@ -38,7 +38,8 @@ public class User {
             int choice = in.nextInt();
             
             if (choice - 1 >= accounts.size()) {
-                System.out.print("No account found, please try again");
+                System.out.print("No account found, please try again \n\n");
+                
             } else {
                 accountChoice = accounts.get(choice - 1);
                 y = 1;
