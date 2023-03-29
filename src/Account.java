@@ -102,7 +102,8 @@ public class Account {
             " Press 1 for Deposit \n" + 
             " Press 2 for Withdraw \n" + 
             " Press 3 for Current Balance \n"+
-            " Press 4 to Exit \n"
+            " Press 4 for Transfer \n" +
+            " Press 5 to Exit \n"
             );
             
             Scanner in = new Scanner(System.in);
@@ -120,6 +121,9 @@ public class Account {
                     getBalance();
                     break;
                 case 4:
+                    System.out.println("Transfer");
+                    break;
+                case 5:
                     x = 1;
                     break;
                 default:
