@@ -94,6 +94,18 @@ public class Account {
          return accountBalance;
     }
 
+    public void tranfer() {
+        // Make sure that the user has more than one account 
+            // if yes, ask them to verify they want to transfer from (current account) and ask them which account they wish to transfer the money to.
+            // if no, return message saying transfer cannot be done. 
+        // Once they have confirmed they want to do the transfer and chosen the account: 
+            // Ask for the amount to transfer.
+            // withdraw that amount from the current account - following same rules as withdraw method
+            // deposit that amount into the chosen account
+
+
+    }
+
 
     public void chooseTransaction() {
         
