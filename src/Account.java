@@ -121,9 +121,11 @@ public class Account {
             transferToAccount = curr.accounts.get(input - 1);
             System.out.print("How much would you like to transfer to " + transferToAccount.accountType + "?\n");
             int transferAmount = sc.nextInt();
-            System.out.print("You are transferring $" + transferAmount + " from " + accountType + " to "
-                    + transferToAccount.accountType);
-                    
+            // System.out.print("You are transferring $" + transferAmount + " from " + accountType + " to "
+            //         + transferToAccount.accountType);
+            System.out.print(transferToAccount.accountType + "Balance: $" +(transferToAccount.accountBalance += transferAmount));
+            System.out.print(accountType + "Balance: $" + (accountBalance -= transferAmount));
+            // System.out.print(transferToAccount.accountBalance += transferAmount);
 
 
         }
