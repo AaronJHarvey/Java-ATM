@@ -119,7 +119,12 @@ public class Account {
             int input = sc.nextInt();
 
             transferToAccount = curr.accounts.get(input - 1);
-            System.out.print(transferToAccount);
+            System.out.print("How much would you like to transfer to " + transferToAccount.accountType + "?\n");
+            int transferAmount = sc.nextInt();
+            System.out.print("You are transferring $" + transferAmount + " from " + accountType + " to "
+                    + transferToAccount.accountType);
+                    
+
 
         }
             // if yes, ask them to verify they want to transfer from (current account) and ask them which account they wish to transfer the money to.
