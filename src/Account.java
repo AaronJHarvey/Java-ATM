@@ -128,6 +128,8 @@ public class Account {
             // System.out.print(transferToAccount.accountBalance += transferAmount);
 
 
+        } else {
+            System.out.print("You do not have enough accounts to make a transfer.");
         }
             // if yes, ask them to verify they want to transfer from (current account) and ask them which account they wish to transfer the money to.
             // if no, return message saying transfer cannot be done. 
